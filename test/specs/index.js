@@ -12,9 +12,11 @@ test('get release notes', (t) => {
     tt.plan(4)
 
     releaseNoteGenerator({}, {
-      version: '1.2.3',
-      repository: {
-        url: 'git+https://github.com/semantic-release/release-notes-generator.git'
+      pkg: {
+        version: '1.2.3',
+        repository: {
+          url: 'git+https://github.com/semantic-release/release-notes-generator.git'
+        }
       }
     }, (err, options) => {
       tt.error(err)

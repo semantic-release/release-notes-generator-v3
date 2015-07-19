@@ -21,7 +21,7 @@
     "babel": "^5.5.8",
     "coveralls": "^2.11.2",
     "mkdirp": "^0.5.1",
-    "nyc": "^2.3.0",
+    "nyc": "^3.0.0",
     "proxyquire": "^1.5.0",
     "rimraf": "^2.4.0",
     "standard": "^4.2.1",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/semantic-release/release-notes-generator#readme",
   "keywords": [
+    "semantic-release",
     "author",
     "automation",
     "changelog",
