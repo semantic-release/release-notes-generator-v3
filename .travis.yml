@@ -2,7 +2,7 @@ sudo: false
 language: node_js
 cache:
   directories:
-  - node_modules
+  - $HOME/.npm
 notifications:
   email: false
 node_js:
@@ -11,3 +11,4 @@ node_js:
 - 8 # stable
 after_success:
 - npm run coverage:upload
+- npm run semantic-release
