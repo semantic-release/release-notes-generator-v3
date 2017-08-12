@@ -14,18 +14,18 @@
     }
   },
   "dependencies": {
-    "conventional-changelog": "1.1.0",
+    "conventional-changelog": "1.1.4",
     "github-url-from-git": "^1.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "coveralls": "^2.11.2",
     "mkdirp": "^0.5.1",
-    "nyc": "^8.3.2",
+    "nyc": "^11.1.0",
     "proxyquire": "^1.5.0",
     "rimraf": "^2.4.0",
-    "standard": "^8.5.0",
-    "tap": "^8.0.0"
+    "standard": "^10.0.3",
+    "tap": "^10.7.1"
   },
   "homepage": "https://github.com/semantic-release/release-notes-generator#readme",
   "keywords": [
