@@ -13,7 +13,6 @@
   "devDependencies": {
     "coveralls": "^2.11.2",
     "mkdirp": "^0.5.1",
-    "nyc": "^11.1.0",
     "proxyquire": "^1.5.0",
     "rimraf": "^2.4.0",
     "standard": "^10.0.3",
@@ -43,11 +42,10 @@
     "access": "public"
   },
   "scripts": {
-    "coverage": "nyc report",
-    "coverage:upload": "npm run coverage -- --reporter=lcovonly && coveralls < coverage/lcov.info",
-    "test": "npm run test:style && npm run test:suite",
-    "test:style": "standard",
-    "test:suite": "nyc tap --no-cov test/{scenarios,specs}/*.js",
+    "coverage": "tap --coverage-report=lcov",
+    "coverage:upload": "tap --coverage-report=text-lcov | coveralls",
+    "pretest": "standard",
+    "test": "tap --100 --jobs-auto './test/{scenarios,specs}/**/*-test.js'",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }

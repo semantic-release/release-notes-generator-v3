@@ -1,7 +1,7 @@
 const test = require('tap').test
 const proxyquire = require('proxyquire')
 
-const releaseNoteGenerator = proxyquire('../../lib', {
+const releaseNoteGenerator = proxyquire('../../', {
   'conventional-changelog': (options, cb) => {
     cb(null, options)
   }
