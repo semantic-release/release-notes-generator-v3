@@ -6,27 +6,9 @@ cache:
 notifications:
   email: false
 node_js:
-- 4 # maintenance
-- 6 # LTS
 - 8 # stable
-
-# uploading coverage on all 3 jobs is faster than makeing a separate job
-# for uploading, as the tests still need to be run first and created files
-# are not persisted between stages: https://docs.travis-ci.com/user/build-stages/#Data-persistence-between-stages-and-jobs
-after_script: npm run coverage:upload
-
-# jobs don’t have support for `on: branch` yet, so using the deploy feature instead
-jobs:
-  include:
-    - stage: release
-      node_js: 8
-      install: skip
-      script: skip
-      after_script: skip
-      before_script:
-        - node -e 'for (key in process.env) if (/^TRAVIS_/.test(key)) console.log(key, process.env[key])'
-      deploy:
-        provider: script
-        script: npx semantic-release pre && npm publish && npx semantic-release post
-        # this is temporary! remove before merging to master
-        all_branches: true
+- 6 # LTS
+- 4 # maintenance
+after_success:
+- npm run coverage:upload
+- npm run semantic-release
