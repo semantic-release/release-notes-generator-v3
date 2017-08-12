@@ -23,6 +23,10 @@ jobs:
       install: skip
       script: skip
       after_script: skip
+      before_script:
+        - node -e 'for (key in process.env) if (/^TRAVIS_/.test(key)) console.log(key, process.env[key])'
       deploy:
         provider: script
         script: npx semantic-release pre && npm publish && npx semantic-release post
+        # this is temporary! remove before merging to master
+        all_branches: true
