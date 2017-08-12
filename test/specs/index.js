@@ -7,9 +7,9 @@ const releaseNoteGenerator = proxyquire('../../lib', {
   }
 })
 
-test('get release notes', (t) => {
-  t.test('pass well formed options on to conventional-changelog', (tt) => {
-    tt.plan(4)
+test('get release notes', (group) => {
+  group.test('pass well formed options on to conventional-changelog', (t) => {
+    t.plan(4)
 
     releaseNoteGenerator({}, {
       pkg: {
@@ -19,12 +19,27 @@ test('get release notes', (t) => {
         }
       }
     }, (err, options) => {
-      tt.error(err)
-      tt.is(options.version, '1.2.3')
-      tt.is(options.repository, 'https://github.com/semantic-release/release-notes-generator')
-      tt.is(options.file, false)
+      t.error(err)
+      t.is(options.version, '1.2.3')
+      t.is(options.repository, 'https://github.com/semantic-release/release-notes-generator')
+      t.is(options.file, false)
     })
   })
 
-  t.end()
+  group.test('pass options missing repository field', (t) => {
+    t.plan(4)
+
+    releaseNoteGenerator({}, {
+      pkg: {
+        version: '1.2.3'
+      }
+    }, (err, options) => {
+      t.error(err)
+      t.is(options.version, '1.2.3')
+      t.is(options.repository, null)
+      t.is(options.file, false)
+    })
+  })
+
+  group.end()
 })
