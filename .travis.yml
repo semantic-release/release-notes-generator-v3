@@ -20,8 +20,9 @@ jobs:
   include:
     - stage: release
       node_js: 8
+      install: skip
       script: skip
       after_script: skip
       deploy:
         provider: script
-        script: npm run semantic-release
+        script: npx semantic-release pre && npm publish && npx semantic-release post
