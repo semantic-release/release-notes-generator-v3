@@ -1,4 +1,5 @@
 {
+  "version": "0.0.0-development",
   "name": "@semantic-release/release-notes-generator",
   "description": "generates the release notes/changelog",
   "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
@@ -16,7 +17,8 @@
     "proxyquire": "^1.5.0",
     "rimraf": "^2.4.0",
     "standard": "^10.0.3",
-    "tap": "^10.7.1"
+    "tap": "^10.7.1",
+    "semantic-release": "^6.3.6"
   },
   "homepage": "https://github.com/semantic-release/release-notes-generator#readme",
   "keywords": [
@@ -35,13 +37,14 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/semantic-release/release-notes-generator.git"
+    "url": "https://github.com/semantic-release/release-notes-generator.git"
   },
   "scripts": {
     "coverage": "nyc report",
     "coverage:upload": "npm run coverage -- --reporter=lcovonly && coveralls < coverage/lcov.info",
     "test": "npm run test:style && npm run test:suite",
     "test:style": "standard",
-    "test:suite": "nyc tap --no-cov test/{scenarios,specs}/*.js"
+    "test:suite": "nyc tap --no-cov test/{scenarios,specs}/*.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
