@@ -39,6 +39,9 @@
     "type": "git",
     "url": "https://github.com/semantic-release/release-notes-generator.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "coverage": "nyc report",
     "coverage:upload": "npm run coverage -- --reporter=lcovonly && coveralls < coverage/lcov.info",
