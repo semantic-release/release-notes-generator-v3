@@ -2,7 +2,10 @@
   "version": "0.0.0-development",
   "name": "@semantic-release/release-notes-generator",
   "description": "generates the release notes/changelog",
-  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
+  "authors": [
+    "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
+    "Gregor Martynus (https://twitter.com/gr2m)"
+  ],
   "bugs": {
     "url": "https://github.com/semantic-release/release-notes-generator/issues"
   },
