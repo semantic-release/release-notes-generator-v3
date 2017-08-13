@@ -33,7 +33,6 @@
     "version"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/semantic-release/release-notes-generator.git"
