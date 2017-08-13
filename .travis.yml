@@ -12,3 +12,6 @@ node_js:
 after_success:
 - npm run coverage:upload
 - npm run semantic-release
+branches:
+  except:
+  - /^v\d+\.\d+\.\d+$/
