@@ -47,7 +47,7 @@
     "coverage": "tap --coverage-report=lcov",
     "coverage:upload": "tap --coverage-report=text-lcov | coveralls",
     "pretest": "standard",
-    "test": "tap --100 --jobs-auto './test/{scenarios,specs}/**/*-test.js'",
+    "test": "tap --100 --jobs-auto './test/{integration,unit}/**/*-test.js'",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
