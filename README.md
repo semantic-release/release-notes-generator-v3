@@ -5,8 +5,8 @@
 [![npm version](https://badge.fury.io/js/%40semantic-release%2Frelease-notes-generator.svg)](http://badge.fury.io/js/%40semantic-release%2Frelease-notes-generator)
 [![Build Status](https://travis-ci.org/semantic-release/release-notes-generator.svg?branch=master)](https://travis-ci.org/semantic-release/release-notes-generator)
 [![Coverage Status](https://coveralls.io/repos/semantic-release/release-notes-generator/badge.svg)](https://coveralls.io/r/semantic-release/release-notes-generator)
-[![Dependency Status](https://david-dm.org/semantic-release/release-notes-generator.svg)](https://david-dm.org/semantic-release/release-notes-generator)
-[![devDependency Status](https://david-dm.org/semantic-release/release-notes-generator/dev-status.svg)](https://david-dm.org/semantic-release/release-notes-generator#info=devDependencies)
+[![Greenkeeper badge](https://badges.greenkeeper.io/semantic-release/release-notes-generator.svg)](https://greenkeeper.io/)
+
 
 ## Usage
 
