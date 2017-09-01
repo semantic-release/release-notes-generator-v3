@@ -10,7 +10,7 @@
     "url": "https://github.com/semantic-release/release-notes-generator/issues"
   },
   "dependencies": {
-    "conventional-changelog": "1.1.4",
+    "conventional-changelog": "1.1.5",
     "github-url-from-git": "^1.4.0"
   },
   "devDependencies": {
