@@ -20,7 +20,7 @@
     "rimraf": "^2.4.0",
     "standard": "^10.0.3",
     "tap": "^10.7.1",
-    "semantic-release": "^7.0.1"
+    "semantic-release": "^8.0.0"
   },
   "homepage": "https://github.com/semantic-release/release-notes-generator#readme",
   "keywords": [
