@@ -1,3 +1,9 @@
+# ⛔ This repository has been archived
+
+See [semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator/) instead.
+
+---
+
 # release-notes-generator
 
 > 🔩📖 generates release notes from commits
